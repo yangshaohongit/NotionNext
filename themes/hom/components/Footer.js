@@ -62,7 +62,7 @@ export const Footer = props => {
                 </div>
               )
             })}
-
+/*
             {/* 页脚右侧最新博文 */}
             <div className='w-full px-4 md:w-2/3 lg:w-6/12 xl:w-3/12'>
               <div className='mb-10 w-full'>
@@ -70,7 +70,7 @@ export const Footer = props => {
                   {siteConfig('STARTER_FOOTER_BLOG_LATEST_TITLE')}
                 </h4>
                 {/* 展示两条最新博客文章 */}
-                <div className='flex flex-col gap-8'>
+                {/* <div className='flex flex-col gap-8'>
                   {latestPosts?.map((item, index) => {
                     return (
                       <SmartLink
@@ -91,7 +91,7 @@ export const Footer = props => {
                       </SmartLink>
                     )
                   })}
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
