@@ -371,6 +371,8 @@ const CONFIG = {
     'https://docs.tangly1024.com/article/vercel-deploy-notion-next',
   STARTER_CTA_BUTTON_TEXT: '开始体验',
 
+  STARTER_FOOTER_POST_COUNT: 0,
+
   STARTER_POST_REDIRECT_ENABLE: true, // 默認開啟重定向
   STARTER_POST_REDIRECT_URL: 'https://www.yangshaohong.com', // 重定向域名
   // STARTER_NEWSLETTER: process.env.NEXT_PUBLIC_THEME_STARTER_NEWSLETTER || false // 是否开启邮件订阅 请先配置mailchimp功能 https://docs.tangly1024.com/article/notion-next-mailchimp
