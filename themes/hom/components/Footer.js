@@ -148,7 +148,7 @@ export const Footer = props => {
         </div>
 
         {/* Footer 背景 */}
-        <div>
+        {/* <div>
           <span className='absolute left-0 top-0 z-[-1]'>
             <img src='/images/starter/footer/shape-1.svg' alt='' />
           </span>
@@ -160,7 +160,7 @@ export const Footer = props => {
           <span className='absolute right-0 top-0 z-[-1]'>
             <SVGFooterCircleBG />
           </span>
-        </div>
+        </div> */}
       </footer>
       {/* <!-- ====== Footer Section End --> */}
     </>
