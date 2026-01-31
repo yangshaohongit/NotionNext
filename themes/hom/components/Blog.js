@@ -43,7 +43,7 @@ export const Blog = ({ posts }) => {
                       {item.pageCoverThumbnail && (
                         <SmartLink href={item?.href} className='block'>
                           <img
-                            src={item.pageCoverThumbnail}
+                            // src={item.pageCoverThumbnail}
                             alt={item.title}
                             className='w-full transition group-hover:rotate-6 group-hover:scale-125'
                           />
@@ -62,7 +62,7 @@ export const Blog = ({ posts }) => {
                         </SmartLink>
                       </h3>
                       <p className='max-w-[370px] text-base text-body-color dark:text-dark-6'>
-                        {item.summary}
+                        {/* {item.summary} */}
                       </p>
                     </div>
                   </div>
