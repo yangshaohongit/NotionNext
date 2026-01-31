@@ -19,7 +19,7 @@ export const Footer = props => {
         data-wow-delay='.15s'>
         <div className='container'>
           <div className='-mx-4 flex flex-wrap'>
-            <div className='w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12'>
+            {/* <div className='w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12'>
               <div className='mb-10 w-full'>
                 <a className='-mx-4 mb-6 inline-block max-w-[160px]'>
                   <Logo white={true} />
@@ -33,10 +33,10 @@ export const Footer = props => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* 中间三列菜单组 */}
-            {STARTER_FOOTER_LINK_GROUP?.map((item, index) => {
+            {/* {STARTER_FOOTER_LINK_GROUP?.map((item, index) => {
               return (
                 <div
                   key={index}
@@ -61,7 +61,7 @@ export const Footer = props => {
                   </div>
                 </div>
               )
-            })}
+            })} */}
 
             {/* 页脚右侧最新博文 */}
             <div className='w-full px-4 md:w-2/3 lg:w-6/12 xl:w-3/12'>
@@ -99,7 +99,7 @@ export const Footer = props => {
 
         {/* 底部版权信息相关 */}
 
-        <div className='mt-12 border-t border-[#8890A4] border-opacity-40 py-8 lg:mt-[60px]'>
+        {/* <div className='mt-12 border-t border-[#8890A4] border-opacity-40 py-8 lg:mt-[60px]'>
           <div className='container'>
             <div className='-mx-4 flex flex-wrap'>
               <div className='w-full px-4 md:w-2/3 lg:w-1/2'>
@@ -145,7 +145,7 @@ export const Footer = props => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Footer 背景 */}
         {/* <div>
