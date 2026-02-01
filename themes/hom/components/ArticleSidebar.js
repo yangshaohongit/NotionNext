@@ -1,6 +1,7 @@
 import throttle from 'lodash.throttle'
 import { uuidToId } from 'notion-utils'
 import { useCallback, useEffect, useState } from 'react'
+import { isBrowser } from '@/lib/utils'
 
 /**
  * 文章标题侧边栏
@@ -23,11 +24,13 @@ export const ArticleSidebar = ({ post }) => {
             const firstId = uuidToId(filteredToc[0].id)
             setActiveSection(firstId)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [filteredToc])
 
     const throttleMs = 200
     const actionSectionScrollSpy = useCallback(
         throttle(() => {
+            if (!isBrowser) return
             const sections = document.getElementsByClassName('notion-h')
             if (sections.length === 0) return
 
@@ -59,7 +62,7 @@ export const ArticleSidebar = ({ post }) => {
 
     // 监听滚动事件，高亮当前标题
     useEffect(() => {
-        if (!filteredToc || filteredToc.length === 0) return
+        if (!isBrowser || !filteredToc || filteredToc.length === 0) return
 
         // 延迟执行，确保页面内容已渲染
         const timer = setTimeout(() => {
