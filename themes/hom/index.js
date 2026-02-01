@@ -51,7 +51,7 @@ import { SVG404 } from './components/svg/SVG404'
  */
 const LayoutBase = props => {
     const { children } = props
-    // 极简模式，会隐藏掉页头页脚等组件，便于嵌入网页等功能 
+    // 极简模式，会隐藏掉页头页脚等组件，便于嵌入网页等功能
     const { isLiteMode } = useGlobal()
     const router = useRouter()
 
@@ -84,7 +84,7 @@ const LayoutBase = props => {
             </div>
 
             {/* 页脚 */}
-            
+
             {isLiteMode ? <></> : <Footer {...props} />}
 
             {/* 悬浮按钮 */}
@@ -175,13 +175,13 @@ const LayoutSlug = props => {
   return (
     <>
       <Banner title={post?.title} description={post?.summary} />
-      <div className='container grow'>
+      <div className='container grow bg-white dark:bg-gray-900 pb-20'>
         <div className='flex flex-wrap justify-center -mx-4'>
-          <div id='container-inner' className='w-full p-4'>
+          <div id='container-inner' className='w-full px-4'>
             {lock && <ArticleLock validPassword={validPassword} />}
 
             {!lock && post && (
-              <div id='article-wrapper' className='mx-auto'>
+              <div id='article-wrapper' className='mx-auto max-w-2xl'>
                 <NotionPage {...props} />
                 <Comment frontMatter={post} />
                 <ShareBar post={post} />
