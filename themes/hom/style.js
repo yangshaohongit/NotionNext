@@ -12,6 +12,11 @@ const Style = () => {
     scrollbar-gutter: stable;
   }
 
+  /* 隐藏侧边栏滚动条 */
+  #article-wrapper + aside::-webkit-scrollbar {
+    display: none;
+  }
+
   #theme-starter .sticky{
     position: fixed;
     z-index: 20;
