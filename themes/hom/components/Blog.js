@@ -78,7 +78,7 @@ export const Blog = ({ posts }) => {
                                                         <h3 className='flex-1'>
                                                             <SmartLink
                                                                 href={item?.href}
-                                                                className='inline-block text-base font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary'>
+                                                                className='inline-block text-sm font-normal text-dark hover:text-primary dark:text-white dark:hover:text-primary'>
                                                                 {item.title}
                                                             </SmartLink>
                                                         </h3>
