@@ -32,25 +32,14 @@ export const Blog = ({ posts }) => {
             </div>
           </div>
           {/* 博客列表 此处优先展示3片文章 */}
-          <div className='-mx-4 flex flex-wrap'>
+          <div className='flex flex-col'>
             {posts?.map((item, index) => {
               return (
-                <div key={index} className='w-full px-4 md:w-1/2 lg:w-1/3'>
+                <div key={index} className='w-full px-4'>
                   <div
                     className='wow fadeInUp group mb-10'
                     data-wow-delay='.1s'>
-                    <div className='mb-8 overflow-hidden rounded-[5px]'>
-                      {item.pageCoverThumbnail && (
-                        <SmartLink href={item?.href} className='block'>
-                          <img
-                            // src={item.pageCoverThumbnail}
-                            alt={item.title}
-                            className='w-full transition group-hover:rotate-6 group-hover:scale-125'
-                          />
-                        </SmartLink>
-                      )}
-                    </div>
-                    <div>
+aqN                    <div>
                       <span className='mb-6 inline-block rounded-[5px] bg-primary px-4 py-0.5 text-center text-xs font-medium leading-loose text-white'>
                         {item.publishDay}
                       </span>
