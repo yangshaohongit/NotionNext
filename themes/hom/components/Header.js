@@ -54,7 +54,7 @@ export const Header = props => {
     <>
       {/* <!-- ====== Navbar Section Start --> */}
       <div className='ud-header absolute left-0 top-0 z-40 flex w-full items-center bg-white/80 dark:bg-dark/80 backdrop-blur-md'>
-        <div className='container'>
+        <div className='container mx-auto'>
           <div className='relative -mx-4 flex items-center justify-between'>
             {/* Logo */}
             <Logo {...props} />

@@ -8,6 +8,10 @@
 const Style = () => {
   return <style jsx global>{`
 
+  html {
+    scrollbar-gutter: stable;
+  }
+
   #theme-starter .sticky{
     position: fixed;
     z-index: 20;

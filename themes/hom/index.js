@@ -175,7 +175,7 @@ const LayoutSlug = props => {
   return (
     <>
       <Banner title={post?.title} description={post?.summary} />
-      <div className='container grow bg-white dark:bg-gray-900 pb-20'>
+      <div className='container mx-auto grow bg-white dark:bg-gray-900 pb-20'>
         <div className='flex flex-wrap justify-center -mx-4'>
           <div id='container-inner' className='w-full px-4'>
             {lock && <ArticleLock validPassword={validPassword} />}
@@ -204,7 +204,7 @@ const LayoutDashboard = props => {
 
   return (
     <>
-      <div className='container grow'>
+      <div className='container mx-auto grow'>
         <div className='flex flex-wrap justify-center -mx-4'>
           <div id='container-inner' className='w-full p-4'>
             {post && (

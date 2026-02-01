@@ -15,7 +15,7 @@ export const Hero = props => {
       <div
         id='home'
         className='relative overflow-hidden bg-white dark:bg-gray-900 pt-[140px] md:pt-[150px] lg:pt-[180px] pb-20'>
-        <div className='container'>
+        <div className='container mx-auto'>
           <div className='-mx-4 flex flex-wrap items-center'>
             <div className='w-full px-4'>
               <div
@@ -108,7 +108,7 @@ export const Hero = props => {
       </div>
       {/* 横幅图片 */}
       {siteConfig('STARTER_HERO_BANNER_IMAGE', null, config) && (
-        <div className='container'>
+        <div className='container mx-auto'>
           <LazyImage
             priority
             className='w-full'
