@@ -17,17 +17,15 @@ import { MenuList } from './MenuList'
 export const Header = props => {
   const router = useRouter()
   const { isDarkMode } = useGlobal()
-  const [buttonTextColor, setColor] = useState(
-    router.route === '/' ? 'text-white' : ''
-  )
+  const [buttonTextColor, setColor] = useState('')
 
   const enableClerk = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
 
   useEffect(() => {
-    if (isDarkMode || router.route === '/') {
+    if (isDarkMode) {
       setColor('text-white')
     } else {
-      setColor('')
+      setColor('text-gray-900')
     }
     // ======= Sticky
     window.addEventListener('scroll', navBarScollListener)
@@ -55,7 +53,7 @@ export const Header = props => {
   return (
     <>
       {/* <!-- ====== Navbar Section Start --> */}
-      <div className='ud-header absolute left-0 top-0 z-40 flex w-full items-center bg-transparent'>
+      <div className='ud-header absolute left-0 top-0 z-40 flex w-full items-center bg-white/80 dark:bg-dark/80 backdrop-blur-md'>
         <div className='container'>
           <div className='relative -mx-4 flex items-center justify-between'>
             {/* Logo */}
@@ -81,7 +79,7 @@ export const Header = props => {
                         </SmartLink>
                         <SmartLink
                           href={siteConfig('STARTER_NAV_BUTTON_2_URL', '')}
-                          className={`signUpBtn ${buttonTextColor} p-2 rounded-md bg-white bg-opacity-20 py-2 text-base font-medium duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark`}>
+                          className={`signUpBtn rounded-full px-5 py-2 text-sm font-medium text-white bg-gray-900 dark:bg-white dark:text-gray-900 duration-300 ease-in-out hover:opacity-90 transition-all`}>
                           {siteConfig('STARTER_NAV_BUTTON_2_TEXT')}
                         </SmartLink>
                       </div>

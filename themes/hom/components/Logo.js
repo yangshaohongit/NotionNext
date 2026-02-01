@@ -17,32 +17,19 @@ export const Logo = props => {
   const logoWhite = siteConfig('STARTER_LOGO_WHITE')
   const logoNormal = siteConfig('STARTER_LOGO')
   const { isDarkMode } = useGlobal()
-  const [logo, setLogo] = useState(logoWhite)
-  const [logoTextColor, setLogoTextColor] = useState('text-white')
+  const [logo, setLogo] = useState(logoNormal)
+  const [logoTextColor, setLogoTextColor] = useState('text-gray-900')
 
   useEffect(() => {
-    // 滚动监听
-    const throttleMs = 200
-    const navBarScrollListener = throttle(() => {
-      const scrollY = window.scrollY
-      // 何时显示浅色或白底的logo
-      const homePageNavBar = router.route === '/' && scrollY < 10 // 在首页并且视窗在页面顶部
-
-      if (white || isDarkMode || homePageNavBar) {
-        setLogo(logoWhite)
-        setLogoTextColor('text-white')
-      } else {
-        setLogo(logoNormal)
-        setLogoTextColor('text-black')
-      }
-    }, throttleMs)
-
-    navBarScrollListener()
-    window.addEventListener('scroll', navBarScrollListener)
-    return () => {
-      window.removeEventListener('scroll', navBarScrollListener)
+    // 根据深色模式切换logo
+    if (isDarkMode) {
+      setLogo(logoWhite)
+      setLogoTextColor('text-white')
+    } else {
+      setLogo(logoNormal)
+      setLogoTextColor('text-gray-900')
     }
-  }, [isDarkMode, router])
+  }, [isDarkMode])
 
   return (
     <div className='w-60 max-w-full px-4'>
@@ -64,7 +51,7 @@ export const Logo = props => {
           onClick={() => {
             router.push('/')
           }}
-          className={`${logoTextColor} logo dark:text-white py-1.5 header-logo-text whitespace-nowrap text-2xl font-semibold`}>
+          className={`${logoTextColor} logo dark:text-white py-1.5 header-logo-text whitespace-nowrap text-xl font-semibold transition-colors`}>
           {siteConfig('TITLE')}
         </span>
       </div>

@@ -72,14 +72,14 @@ export const MenuList = props => {
         className={`absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden ${
           showMenu ? 'navbarTogglerActive' : ''
         }`}>
-        <span className='relative my-[6px] block h-[2px] w-[30px] bg-white duration-200 transition-all'></span>
-        <span className='relative my-[6px] block h-[2px] w-[30px] bg-white duration-200 transition-all'></span>
-        <span className='relative my-[6px] block h-[2px] w-[30px] bg-white duration-200 transition-all'></span>
+        <span className='relative my-[6px] block h-[2px] w-[30px] bg-gray-900 dark:bg-white duration-200 transition-all'></span>
+        <span className='relative my-[6px] block h-[2px] w-[30px] bg-gray-900 dark:bg-white duration-200 transition-all'></span>
+        <span className='relative my-[6px] block h-[2px] w-[30px] bg-gray-900 dark:bg-white duration-200 transition-all'></span>
       </button>
 
       <nav
         id='navbarCollapse'
-        className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6 ${
+        className={`absolute right-4 top-full w-full max-w-[250px] rounded-xl bg-white/95 dark:bg-gray-900/95 backdrop-blur-md py-5 shadow-xl border border-gray-100 dark:border-gray-800 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none lg:border-0 dark:lg:bg-transparent xl:px-6 ${
           showMenu ? '' : 'hidden'
         }`}>
         <ul className='blcok lg:flex 2xl:ml-20'>

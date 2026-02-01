@@ -14,7 +14,7 @@ export const Hero = props => {
       {/* <!-- ====== Hero Section Start --> */}
       <div
         id='home'
-        className='relative overflow-hidden bg-primary pt-[120px] md:pt-[130px] lg:pt-[160px]'>
+        className='relative overflow-hidden bg-white dark:bg-gray-900 pt-[140px] md:pt-[150px] lg:pt-[180px] pb-20'>
         <div className='container'>
           <div className='-mx-4 flex flex-wrap items-center'>
             <div className='w-full px-4'>
@@ -22,20 +22,20 @@ export const Hero = props => {
                 className='hero-content wow fadeInUp mx-auto max-w-[780px] text-center'
                 data-wow-delay='.2s'>
                 {/* 主标题 */}
-                <h1 className='mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]'>
+                <h1 className='mb-6 text-4xl font-semibold leading-tight text-gray-900 dark:text-white sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-[1.1] tracking-tight'>
                   {siteConfig('STARTER_HERO_TITLE_1', null, config)}
                 </h1>
                 {/* 次标题 */}
-                <p className='mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]'>
+                <p className='mx-auto mb-10 max-w-[600px] text-lg font-normal text-gray-600 dark:text-gray-400 sm:text-xl sm:leading-relaxed'>
                   {siteConfig('STARTER_HERO_TITLE_2', null, config)}
                 </p>
                 {/* 按钮组 */}
-                <ul className='mb-10 flex flex-wrap items-center justify-center gap-5'>
+                <ul className='mb-10 flex flex-wrap items-center justify-center gap-4'>
                   {siteConfig('STARTER_HERO_BUTTON_1_TEXT', null, config) && (
                     <li>
                       <SmartLink
                         href={siteConfig('STARTER_HERO_BUTTON_1_URL', '')}
-                        className='inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color'>
+                        className='inline-flex items-center justify-center rounded-full bg-gray-900 dark:bg-white px-8 py-3 text-center text-sm font-medium text-white dark:text-gray-900 shadow-sm transition-all duration-200 ease-in-out hover:opacity-90 hover:shadow-md'>
                         {siteConfig('STARTER_HERO_BUTTON_1_TEXT', null, config)}
                       </SmartLink>
                     </li>
@@ -49,7 +49,7 @@ export const Hero = props => {
                           config
                         )}
                         target='_blank'
-                        className='flex items-center rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark'
+                        className='flex items-center rounded-full border border-gray-300 dark:border-gray-700 bg-transparent px-8 py-3 text-sm font-medium text-gray-900 dark:text-gray-100 transition-all duration-200 ease-in-out hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-600'
                         rel='noreferrer'>
                         {siteConfig(
                           'STARTER_HERO_BUTTON_2_ICON',
